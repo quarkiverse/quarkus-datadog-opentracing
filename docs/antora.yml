@@ -1,0 +1,5 @@
+name: quarkus-datadog-opentracing
+title: Quarkus - Datadog Opentracing
+version: dev
+nav:
+  - modules/ROOT/nav.adoc
