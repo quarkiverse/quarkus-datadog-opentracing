@@ -29,7 +29,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     
-    <quarkus.version>1.13.2.Final</quarkus.version>
+    <quarkus.version>2.0.0.Alpha1</quarkus.version>
     
 	<opentracing.version>0.32.0</opentracing.version>
 	<datadog-tracing.version>0.78.3</datadog-tracing.version>
