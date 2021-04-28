@@ -11,11 +11,12 @@ import io.quarkus.test.junit.QuarkusTest;
 public class DatadogOpentracingResourceTest {
 
     @Test
-    public void testHelloEndpoint() {
-        given()
-                .when().get("/datadog-opentracing")
+    public void testDatadogTracer() throws InterruptedException {
+
+        given().when()
+                .get("/tracing/active")
                 .then()
                 .statusCode(200)
-                .body(is("Hello datadog-opentracing"));
+                .body(is("true"));
     }
 }
