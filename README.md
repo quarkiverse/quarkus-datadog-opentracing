@@ -26,7 +26,8 @@ The support for this extension may stop as soon as Datadog provides a full suppo
 
 ## How to setup the extension
 
-A complete example on how to setup your project for this extension is available here [TODO]
+A complete example on how to setup your project for this extension is [available here](https://github.com/nicolas-vivot/quarkiverse-datadog-opentracing-setup-example)
+
 
 Long story short, you will need to include different dependencies depending on what you want to achieve.
 
