@@ -2,19 +2,60 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+  
   <parent>
     <groupId>io.quarkiverse.opentracing.datadog</groupId>
     <artifactId>quarkus-datadog-opentracing-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
+  
   <artifactId>quarkus-datadog-opentracing</artifactId>
   <name>Quarkus - Datadog Opentracing - Runtime</name>
+  
   <dependencies>
+    <!-- <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-core</artifactId>
+    </dependency> -->
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-arc</artifactId>
     </dependency>
+    
+    <dependency>
+      <groupId>io.opentracing</groupId>
+      <artifactId>opentracing-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.opentracing</groupId>
+      <artifactId>opentracing-util</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.datadoghq</groupId>
+      <artifactId>dd-trace-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.datadoghq</groupId>
+      <artifactId>dd-trace-ot</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.graalvm.nativeimage</groupId>
+      <artifactId>svm</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-junit5-mockito</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-junit5-internal</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+  
   <build>
     <plugins>
       <plugin>

@@ -1,9 +1,10 @@
 name: Datadog Opentracing
-#description: Datadog Opentracing ...
 metadata:
-#  keywords:
-#    - datadog-opentracing
+  keywords:
+    - "datadog-opentracing"
+    - "monitoring"
+    - "distributed-tracing"
 #  guide: ...
-#  categories:
-#    - "miscellaneous"
-#  status: "preview"
+  categories:
+    - "observability"
+  status: "experimental"
