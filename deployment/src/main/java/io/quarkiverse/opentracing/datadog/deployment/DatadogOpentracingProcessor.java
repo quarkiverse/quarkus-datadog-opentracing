@@ -1,6 +1,7 @@
 package io.quarkiverse.opentracing.datadog.deployment;
 
 import java.util.function.BooleanSupplier;
+
 import io.quarkiverse.opentracing.datadog.DatadogTracerConfig;
 import io.quarkiverse.opentracing.datadog.DatadogTracerRecorder;
 import io.quarkus.deployment.Capability;
@@ -13,13 +14,11 @@ import io.quarkus.deployment.builditem.FeatureBuildItem;
 /**
  * Add support for Datadog tracer implementation.
  */
-class DatadogOpentracingProcessor
-{
+class DatadogOpentracingProcessor {
 
     private static final String FEATURE = "datadog-opentracing";
 
-    public static class DatadogTracerEnabled implements BooleanSupplier
-    {
+    public static class DatadogTracerEnabled implements BooleanSupplier {
 
         DatadogTracerConfig.DatadogOtBuildConfig buildConfig;
 
