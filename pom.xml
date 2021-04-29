@@ -31,7 +31,7 @@
     
     <quarkus.version>2.0.0.Alpha1</quarkus.version>
     
-	<opentracing.version>0.32.0</opentracing.version>
+	<opentracing.version>0.33.0</opentracing.version>
 	<datadog-tracing.version>0.78.3</datadog-tracing.version>
 	
   </properties>
