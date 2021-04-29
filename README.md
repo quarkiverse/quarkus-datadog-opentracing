@@ -26,87 +26,22 @@ The support for this extension may stop as soon as Datadog provides a full suppo
 
 ## How to setup the extension
 
-A complete example on how to setup your project for this extension is [available here](https://github.com/nicolas-vivot/quarkiverse-datadog-opentracing-setup-example)
+The extension is enabled by default. 
 
+The **logs injection** feature is configured based on Datadog configuration and therefore enabled by default.
 
-Long story short, you will need to include different dependencies depending on what you want to achieve.
-
-### Your project dependencies
-
-As explained above, this extension only provides the opentracing Datadog's tracer implementation.
-
-- to activate opentracing capabilities, please add the **quarkus-smallrye-opentracing** extension.
-- to have logs correlation, please add the **quarkus-logging-json** extension. 
-
-Note: Since Datadog libraries depends on opentracing 0.32.0 and Quarkus is still on 0.31.0, you will have to override the version on your project as well.
-
-**Example**
+To deactivate the extension, or the logs correlation feature:
 
 ```
-    <!-- Required: to activate tracing capabilities on your application -->
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-smallrye-opentracing</artifactId>
-    </dependency>
-    
-    <!-- Required: This extension to activate Datadog's tracer -->
-    <dependency>
-      <groupId>io.quarkiverse.opentracing.datadog</groupId>
-      <artifactId>quarkus-datadog-opentracing</artifactId>
-      <version>${replace-by-your.version}</version>
-    </dependency>
-    
-    <!-- Optional: Only if you activate logs correlation feature -->
-    <dependency>
-      <groupId>io.quarkiverse.loggingjson</groupId>
-      <artifactId>quarkus-logging-json</artifactId>
-      <version>${replace-by-your.version}</version>
-    </dependency>
-    
-    <!-- Required: to override version 0.31.0 from Quarkus. 
-         Datadog libraries are using 0.32.0 -->
-    <dependency>
-      <groupId>io.opentracing</groupId>
-      <artifactId>opentracing-api</artifactId>
-      <version>0.32.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.opentracing</groupId>
-      <artifactId>opentracing-util</artifactId>
-      <version>0.32.0</version>
-    </dependency>
-    
-    <!-- Optional : only if you want to use an upgraded version of Datadog libraries -->
-    <dependency>
-      <groupId>com.datadoghq</groupId>
-      <artifactId>dd-trace-api</artifactId>
-      <version>${replace-by-your.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.datadoghq</groupId>
-      <artifactId>dd-trace-ot</artifactId>
-      <version>${replace-by-your.version}</version>
-    </dependency>
-    
+quarkus.datadog.enabled=false
+dd.logs.injection=false
 ```
 
+A more complete example on how to setup your project for this extension is [available here](https://github.com/nicolas-vivot/quarkiverse-datadog-opentracing-setup-example) 
 
-## Configuration
+You will also find small guides to run your application with a local Datadog agent, and how to setup your Datadog account to get the correlation between traces and logs.
 
-### Extension configuration
-
-
-This extension is enabled by default. The logs injection feature is disabled by default.
-
-To activate both:
-
-```
-quarkus.datadog.enabled=true
-quarkus.datadog.logs.injection=true
-```
-
-### Datadog tracer configuration
+## Datadog tracer configuration
 
 All official datadog tracer's properties are supported as long as the namings are correct according to the [official documentation](https://docs.datadoghq.com/tracing/setup_overview/setup/java/?tab=containers).
 Properties should be configured under *dd* root property.
