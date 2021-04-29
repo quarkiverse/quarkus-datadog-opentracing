@@ -8,9 +8,9 @@ import org.eclipse.microprofile.config.Config;
 public interface ConfigAdapter {
     static final String DATADOG_ENV_PREFIX = "DD_";
     static final String DATADOG_PREFIX = "dd.";
-    static final String QUARKUS_DATADOG_PREFIX = "quarkus.datadog.";
-    static final String ENABLED = QUARKUS_DATADOG_PREFIX + "enabled";
-    static final String MDC_INJECTION_ENABLED = QUARKUS_DATADOG_PREFIX + "logs.injection";
+    static final String ENABLED = "quarkus.datadog.enabled";
+
+    static final String MDC_INJECTION_ENABLED = "logs.injection";
 
     static String formatEnvironmentVariableAsPropertyName(final String env) {
         return env.replaceAll("_", ".")

@@ -18,15 +18,6 @@ public class DatadogTracerConfig {
          */
         @ConfigItem(defaultValue = "true")
         public boolean enabled;
-
-        /**
-         * MDC injection support. Injects Datadog trace_id and span_id into MDC for correlation
-         * between traces and logs sent to Datadog
-         * <p>
-         * MDC injection is enabled by default
-         */
-        @ConfigItem(defaultValue = "false", name = "logs.injection")
-        public boolean logInjection;
     }
 
     /**

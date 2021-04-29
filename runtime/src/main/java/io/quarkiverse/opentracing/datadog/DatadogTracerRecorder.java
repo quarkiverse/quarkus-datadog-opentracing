@@ -1,6 +1,7 @@
 package io.quarkiverse.opentracing.datadog;
 
-import org.eclipse.microprofile.config.Config;
+import java.util.Properties;
+
 import org.eclipse.microprofile.config.ConfigProvider;
 
 import datadog.opentracing.DDTracer;
@@ -13,15 +14,19 @@ import io.quarkus.runtime.annotations.Recorder;
 public class DatadogTracerRecorder {
     public void installDatadogTracer() {
 
-        final Config config = ConfigProvider.getConfig();
+        final Properties properties = ConfigAdapter.captureProperties(ConfigProvider.getConfig());
 
         // Create the tracer from a property object
         DDTracer tracer = DDTracer.builder()
-                .withProperties(ConfigAdapter.captureProperties(config))
+                .withProperties(properties)
                 .build();
 
-        // Activate MDC injection only if enabled from the configuration
-        if (config.getValue(ConfigAdapter.MDC_INJECTION_ENABLED, Boolean.class)) {
+        // Activate MDC injection only if enabled from the Datadog configuration
+        // Default is true in Datadog libraries, so we keep that default behavior here too
+        if (Boolean.parseBoolean(//
+                properties.getProperty(//
+                        ConfigAdapter.MDC_INJECTION_ENABLED,
+                        Boolean.TRUE.toString()))) {
 
             tracer.addScopeListener(new MdcInjectionScopeListener());
         }
