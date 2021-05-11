@@ -29,7 +29,7 @@
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     
     <quarkus.version>2.0.0.Alpha2</quarkus.version>
-	<datadog-tracing.version>0.79.0</datadog-tracing.version>
+	<datadog-tracing.version>0.80.0</datadog-tracing.version>
 	
   </properties>
   
