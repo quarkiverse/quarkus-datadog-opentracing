@@ -33,7 +33,17 @@
       <groupId>com.datadoghq</groupId>
       <artifactId>dd-trace-ot</artifactId>
     </dependency>
-
+    <!-- Dependencies introduced by Datadog communication module since 0.83.1 -->
+    <dependency>
+      <groupId>com.datadoghq</groupId>
+      <artifactId>java-dogstatsd-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.moshi</groupId>
+      <artifactId>moshi</artifactId>
+    </dependency>
+    <!--  -->
+    
     <dependency>
       <groupId>org.graalvm.nativeimage</groupId>
       <artifactId>svm</artifactId>

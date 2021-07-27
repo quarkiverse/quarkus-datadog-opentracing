@@ -29,7 +29,9 @@
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     
     <quarkus.version>2.1.0.Final</quarkus.version>
-	  <datadog-tracing.version>0.83.2</datadog-tracing.version>
+	<datadog-tracing.version>0.83.2</datadog-tracing.version>
+    <datadog-dogstatsd.version>2.13.0</datadog-dogstatsd.version>
+    <moshi.version>1.9.2</moshi.version>
 	
   </properties>
   
@@ -52,6 +54,18 @@
         <artifactId>dd-trace-ot</artifactId>
         <version>${datadog-tracing.version}</version>
       </dependency>
+      <!-- Dependencies introduced by Datadog communication module since 0.83.1 -->
+      <dependency>
+        <groupId>com.datadoghq</groupId>
+        <artifactId>java-dogstatsd-client</artifactId>
+        <version>${datadog-dogstatsd.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.moshi</groupId>
+        <artifactId>moshi</artifactId>
+        <version>${moshi.version}</version>
+      </dependency>
+      <!--  -->
     </dependencies>
   </dependencyManagement>
   
