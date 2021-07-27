@@ -68,8 +68,8 @@ This extension support / has been tested with
 
 Type | Library | Version
 ------|---------|--------
-Support | dd-trace-api | 0.74.0 to 0.78.3
-Support | dd-trace-ot | 0.74.0 to 0.78.3
+Support | dd-trace-api | 0.74.0 to 0.83.2
+Support | dd-trace-ot | 0.74.0 to 0.83.2
 
 
 ## Contributors ✨
