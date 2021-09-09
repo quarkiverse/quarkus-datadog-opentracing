@@ -1,25 +1,24 @@
 package io.quarkiverse.opentracing.datadog.deployment;
 
 import java.util.function.BooleanSupplier;
+
 import io.quarkiverse.opentracing.datadog.DatadogTracerConfig;
-import io.quarkiverse.opentracing.datadog.DatadogTracerRecorder;
+import io.quarkiverse.opentracing.datadog.DatadogTracerInitializer;
+import io.quarkus.arc.deployment.AdditionalBeanBuildItem;
 import io.quarkus.deployment.Capability;
+import io.quarkus.deployment.annotations.BuildProducer;
 import io.quarkus.deployment.annotations.BuildStep;
-import io.quarkus.deployment.annotations.ExecutionTime;
-import io.quarkus.deployment.annotations.Record;
 import io.quarkus.deployment.builditem.CapabilityBuildItem;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 
 /**
  * Add support for Datadog tracer implementation.
  */
-class DatadogOpentracingProcessor
-{
+class DatadogOpentracingProcessor {
 
     private static final String FEATURE = "datadog-opentracing";
 
-    public static class DatadogTracerEnabled implements BooleanSupplier
-    {
+    public static class DatadogTracerEnabled implements BooleanSupplier {
 
         DatadogTracerConfig.DatadogOtBuildConfig buildConfig;
 
@@ -40,8 +39,9 @@ class DatadogOpentracingProcessor
     }
 
     @BuildStep(onlyIf = DatadogTracerEnabled.class)
-    @Record(ExecutionTime.RUNTIME_INIT)
-    void installDatadogTracer(DatadogTracerRecorder recorder) {
-        recorder.installDatadogTracer();
+    void buildDatadogInitializer(BuildProducer<AdditionalBeanBuildItem> additionalBeans) {
+
+        additionalBeans
+                .produce(AdditionalBeanBuildItem.unremovableOf(DatadogTracerInitializer.class));
     }
 }
