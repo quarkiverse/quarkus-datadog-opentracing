@@ -62,14 +62,14 @@ The extension would discover all environment variables starting with the prefix 
 **Be careful, an environment variable overrides its property value**
 
 
-## Datadog libraries support matrix
+## Libraries support matrix
 
 This extension support / has been tested with
 
-Type | Library | Version
+Extension version | Quarkus | DD Trace API/OT
 ------|---------|--------
-Support | dd-trace-api | 0.74.0 to 0.83.2
-Support | dd-trace-ot | 0.74.0 to 0.83.2
+1.0.x | 1.x to 2.1.1 | 0.74.0 to 0.83.0
+1.1.x | 2.2.2 | 0.83.2 to 0.86.0
 
 
 ## Contributors ✨
