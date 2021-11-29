@@ -5,7 +5,7 @@
   <parent>
     <groupId>io.quarkiverse</groupId>
     <artifactId>quarkiverse-parent</artifactId>
-    <version>7</version>
+    <version>8</version>
   </parent>
   
   <groupId>io.quarkiverse.opentracing.datadog</groupId>
@@ -29,7 +29,7 @@
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     
     <quarkus.version>2.5.0.Final</quarkus.version>
-    <datadog-tracing.version>0.88.0</datadog-tracing.version>
+    <datadog-tracing.version>0.90.0</datadog-tracing.version>
     <datadog-dogstatsd.version>2.13.0</datadog-dogstatsd.version>
     <moshi.version>1.12.0</moshi.version>
 	
