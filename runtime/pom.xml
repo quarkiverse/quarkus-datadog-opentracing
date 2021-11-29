@@ -67,6 +67,11 @@
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-bootstrap-maven-plugin</artifactId>
         <version>${quarkus.version}</version>
+        <configuration>
+          <capabilities>
+            <provides>io.quarkus.opentracing</provides>
+          </capabilities>
+   	    </configuration>
         <executions>
           <execution>
             <phase>compile</phase>
