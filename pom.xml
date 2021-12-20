@@ -30,7 +30,7 @@
     
     <quarkus.version>2.5.0.Final</quarkus.version>
     <datadog-tracing.version>0.91.0</datadog-tracing.version>
-    <datadog-dogstatsd.version>2.13.0</datadog-dogstatsd.version>
+    <datadog-dogstatsd.version>3.0.1</datadog-dogstatsd.version>
     <moshi.version>1.12.0</moshi.version>
 	
   </properties>
