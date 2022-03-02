@@ -28,7 +28,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     
-    <quarkus.version>2.7.0.Final</quarkus.version>
+    <quarkus.version>2.7.3.Final</quarkus.version>
     <datadog-tracing.version>0.94.1</datadog-tracing.version>
     <datadog-dogstatsd.version>4.0.0</datadog-dogstatsd.version>
     <moshi.version>1.12.0</moshi.version>
