@@ -5,7 +5,7 @@
   <parent>
     <groupId>io.quarkiverse.opentracing.datadog</groupId>
     <artifactId>quarkus-datadog-opentracing-parent</artifactId>
-    <version>1.1.6-SNAPSHOT</version>
+    <version>1.1.6</version>
   </parent>
   
   <artifactId>quarkus-datadog-opentracing-deployment</artifactId>
