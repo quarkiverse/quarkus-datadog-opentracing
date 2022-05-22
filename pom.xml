@@ -10,7 +10,7 @@
   
   <groupId>io.quarkiverse.opentracing.datadog</groupId>
   <artifactId>quarkus-datadog-opentracing-parent</artifactId>
-  <version>1.1.6</version>
+  <version>1.1.7-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Quarkus - Datadog Opentracing - Parent</name>
   
@@ -112,8 +112,4 @@
       </modules>
     </profile>
   </profiles>
-
-  <scm>
-    <tag>1.1.6</tag>
-  </scm>
 </project>
