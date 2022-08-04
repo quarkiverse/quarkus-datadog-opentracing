@@ -3,6 +3,13 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+
+## EDIT 2022-08-04: This extension won't be maintained anymore. 
+Recently, Datadog has integrated their OTEL collector directly into their Datadog Agent. Therefore, (my) recommendation from now is to:
+- use OTEL in your Quarkus applications
+- configure the Datadog Agent to enable the OTEL collector
+- configure the OTEL extension in your Quarkus application to target the Datadog Agent OTEL collector by passing the required IP/port location as environment variable at startup / runtime.
+
 ## About this extension
 
 This repository hosts an extension to support and activate the Datadog opentracing tracer.
